@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Churrascômetro</title>
+</head>
+<body id="body">
+
+  <div id="welcome" class="churrascometro before">
+    <h1>Bem vindo ao Churrascômetro!</h1>
+    <p>Este aplicativo calcula para você as quantidades ideais de carne, cerveja e de outras bebidas, baseado no número de participantes do seu churrasco.</p>
+    <p>Tomamos por base o consumo por adulto de: 400g carne, 1,2L de cerveja e 1L de água/refrigerante</p>
+    <p>Se o churrasco durar mais de 6 horas, consideramos 650g de carne, 2L de cerveja e 1,5L de água/refrigerante</p>
+    <input type="button" value="Vamos lá!" id="letsGo">
+  </div>
+
+  <div id="churrascometro" class="churrascometro before">
+    <img class="gear" id="gear" src="./Assets/gear.png" alt="gear icon">
+    <h1>Churrascômetro</h1>
+    <div id="error"></div>
+    <input type="number" name="adultos" id="adultos" placeholder="Número de Adultos">
+    <input type="number" name="criancas" id="criancas" placeholder="Número de Crianças">
+    <label>Duração do Churrasco:</label>
+    <div class="radio">
+      <input type="radio" name="tempo" id="rad" value="5" checked>
+      <label for="rad">Menos que 6 horas</label>
+    </div>
+    <div class="radio">
+      <input type="radio" name="tempo" id="6h" value="6">
+      <label for="6h">6 horas ou mais</label>
+    </div>
+    <input type="button" value="Calcular" id="btn">
+    <div id="res">
+    </div>
+  </div>
+
+  <div id="settings" class="churrascometro before">
+    <div class="set">
+      <div class="q">
+        <label><strong>Para churrascos com menos de 6 horas de duração</strong></label>
+        <label >Quantidade de carne por pessoa (g)</label>
+        <input type="number" name="meat5h" id="meat5h">
+        <label >Quantidade de cerveja por pessoa (ml)</label>
+        <input type="number" name="beer5h" id="beer5h">
+        <label >Quantidade de agua/refrigerante por pessoa (ml)</label>
+        <input type="number" name="drinks5h" id="drinks5h">
+        <input id="salvar" type="button" value="Salvar">
+      </div>
+      <div class="q">
+        <label><strong>Para churrascos com duração de 6 horas ou mais</strong></label>
+        <label >Quantidade de carne por pessoa (g)</label>
+        <input type="number" name="meat6h" id="meat6h">
+        <label >Quantidade de cerveja por pessoa (ml)</label>
+        <input type="number" name="beer6h" id="beer6h">
+        <label >Quantidade de agua/refrigerante por pessoa (ml)</label>
+        <input type="number" name="drinks6h" id="drinks6h">
+        <input id="cancelar" type="button" value="Cancelar">
+      </div>
+    </div>
+    <div class="buttons">
+      
+      
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
